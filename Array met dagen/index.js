@@ -64,9 +64,9 @@ console.log('')
 
 console.log('Alle dagen van de week in omgekeerde volgorde zijn:')
 
-for(i=-1; i>-7; i--) {
+for(i=6; i>-1; i--) {
     let kommaOfPunt = ''
-    if (i<-6) {
+    if (i>0) {
          kommaOfPunt = ','
     }
 
@@ -84,9 +84,9 @@ console.log('')
 
 console.log('De werkdagen in omgekeerde volgorde zijn:')
 
-for(i=-1; i>-7; i--) {
+for(i=4; i>-1; i--) {
     let kommaOfPunt = ''
-    if (i<-6) {
+    if (i>0) {
          kommaOfPunt = ','
     }
 
@@ -104,9 +104,9 @@ console.log('')
 
 console.log('De weekenddagen in omgekeerde volgorde zijn:')
 
-for(i=-1; i>-7; i--) {
+for(i=6; i>4; i--) {
     let kommaOfPunt = ''
-    if (i<-6) {
+    if (i>5) {
          kommaOfPunt = ','
     }
 
