@@ -1,6 +1,5 @@
 namen=[]
 
-document.write('<h2>De ingevoerde namen in de array zijn:</h2>')
 var stoploop = true
 
 var askQuantity = prompt('Voer het hoeveelheid namen er zijn:')
@@ -16,17 +15,20 @@ while(stoploop){
 
 for(let i = 0; i < askQuantity; i++) {
   
-    var askName = prompt('Voer een naam in (zeg "stop" om te stoppen):')
+    var askName = prompt('Voer een naam in:')
     namen.push(askName)
 
     }
+
+document.write('<h2>De ingevoerde namen in de array zijn:</h2>')
 
 for(let i = 0; i< askQuantity; i++) {
     document.write(namen[i])
     document.write('<br>')
 }
+document.write('<h2>De ingevoerde namen in de array in omgekeerde volgorde zijn:</h2>')
 
-for(let i = 0; i< askQuantity; i++) {
+for(let i = askQuantity  - 1; i > -1; i--) {
     document.write(namen[i])
     document.write('<br>')
 }
