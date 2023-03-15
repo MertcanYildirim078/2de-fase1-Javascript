@@ -1,3 +1,5 @@
-h1 {
-    color:chartreuse
+body {
+    color: chartreuse;
+    background-color:midnightblue;
+    padding-left: 25%
 }
