@@ -22,21 +22,15 @@ for(let i = 1; i <= buttonAdder; i++) {
 
         colorChanger++
 
-        if (colorChanger == 1)
-        createButton.style.backgroundColor = 'red'; 
-
+        if (colorChanger == 1) {
+            createButton.style.backgroundColor = 'red'; 
+        }
             else if (colorChanger == 2) {
-                createButton.style.backgroundColor = 'purple'; 
+                createButton.style.backgroundColor = 'black'; 
             }
-                else if (colorChanger == 3) {
-                    createButton.style.backgroundColor = 'blue'; 
+                else {
+                    container.removeChild(createButton);
                 }
-                    else if (colorChanger == 4) {
-                        createButton.style.backgroundColor = 'black'; 
-                    }
-                        else {
-                            container.removeChild(createButton);
-                        }
     });
 
 

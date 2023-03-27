@@ -1,0 +1,11 @@
+#container {
+    display: grid;
+    background-color: grey;
+    padding: 30px;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 10px;
+}
+
+#button1 {
+    background-color: red;
+}
