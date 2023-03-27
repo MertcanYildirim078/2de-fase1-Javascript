@@ -8,15 +8,38 @@ var buttonAdder = 60
 
 // Create de buttons hieronder en checks voor clicks
 for(let i = 1; i <= buttonAdder; i++) {
-    
+
+    let colorChanger = 0
+
     let createButton = document.createElement("button");
+
     createButton.innerText = i;
     createButton.style.font = 'bold';
     createButton.style.fontSize = '40px';
     createButton.style.backgroundColor = 'green';
+    
     createButton.addEventListener('click', function () {
-        createButton.style.backgroundColor = 'red';
+
+        colorChanger++
+
+        if (colorChanger == 1)
+        createButton.style.backgroundColor = 'red'; 
+
+            else if (colorChanger == 2) {
+                createButton.style.backgroundColor = 'purple'; 
+            }
+                else if (colorChanger == 3) {
+                    createButton.style.backgroundColor = 'blue'; 
+                }
+                    else if (colorChanger == 4) {
+                        createButton.style.backgroundColor = 'black'; 
+                    }
+                        else if (colorChanger == 5) {
+                            container.removeChild(createButton);
+                        }
     });
+
+
     container.appendChild(createButton);
 
 }
