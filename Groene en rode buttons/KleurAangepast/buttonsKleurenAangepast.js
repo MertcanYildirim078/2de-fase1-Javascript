@@ -23,7 +23,7 @@ for(let i = 1; i <= buttonAdder; i++) {
         colorChanger++
 
         if (colorChanger == 1) {
-            createButton.style.backgroundColor = 'red'; 
+            createButton.style.backgroundColor = 'purple'; 
         }
             else if (colorChanger == 2) {
                 createButton.style.backgroundColor = 'black'; 
