@@ -47,15 +47,45 @@ const data = [{
     "leeftijd": 38,
     "gewicht": 65
  }];
- 
-for(let i in data) {
-    let container = document.createElement("h2");
-    container.id = 'data-container';
-    
-    container.innerHTML =
 
-     `voornaam: ` + data[i]['voornaam'] + '<br>' + `achternaam: ` + data[i]['achternaam']  + '<br>'
-     + `nationaliteit: ` + data[i]['nationaliteit']  + '<br>' + `leeftijd: ` + data[i]['leeftijd']  + '<br>' + `gewicht: ` + data[i]['gewicht'];
 
-    document.body.appendChild(container);
+ var filter = document.createElement("input")
+ filter.placeholder = "Filter"
+ filter.id = 'myInput'
+
+ var button = document.createElement("button")
+ button.innerText = "OK"
+ button.addEventListener("click", renderStuff)
+
+ document.body.appendChild(filter)
+ document.body.appendChild(button)
+
+function renderStuff() {
+
+   var filterValue = parseFloat(filter.value);   
+
+   for(let i = 0; data.length; i++) {
+
+      if (filterValue < data[i].leeftijd) {
+      
+      let container = document.createElement("ul");
+      container.id = 'data-container';
+   
+      container.innerHTML =
+
+      `<li>voornaam: ` + data[i]['voornaam'] + '</li> <br>' + `<li>achternaam: ` + data[i]['achternaam']  + '</li> <br>'
+      + `<li> nationaliteit: ` + data[i]['nationaliteit']  + '</li> <br>' + `<li> leeftijd: ` + data[i]['leeftijd']  + '</li> <br>' + `<li> gewicht: ` + data[i]['gewicht'] + '</li> <br>';
+      console.log(data[i].voornaam);
+      document.body.appendChild(container);
+      } 
+   }
 }
+
+// function filterStuff(filter) {
+   
+
+//    var filteredList = data.filter(() => parseInt("leeftijd") <= filterValue); {
+//         renderStuff(filteredList);
+// }}
+
+// renderStuff()
